@@ -6,7 +6,7 @@
  * @param $query    WP_Query Object
  */
 
-function bones_page_navi2( $query ) {
+function hps_page_navi( $query = false ) {
     global $wp_query;
     $bignum = 999999999;
     if( !$query )
