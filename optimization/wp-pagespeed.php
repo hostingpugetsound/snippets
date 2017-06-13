@@ -13,6 +13,8 @@ function hps_defer_scripts( $tag, $handle, $src ) {
 
     // The handles of the enqueued scripts we want to defer
     $defer_scripts = array(
+        'bones-modernizr',
+        'bones-js',
         'admin-bar',
         'flexslider',
         'jquery-migrate',
