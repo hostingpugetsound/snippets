@@ -1,0 +1,13 @@
+# … the .htaccess code you provided needs to be placed outside of the “# BEGIN WordPress” and the “# END WordPress” lines.
+# If it is placed within those lines WordPress will remove it the next time the permalinks get flushed.
+# Also, the code only worked for me when I placed it before the “# BEGIN WordPress” line. Placing it after the “# END WordPress” line did not work.
+
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTPS} off
+    RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+    RewriteCond %{SERVER_PORT} !^443$
+    RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+</IfModule>
